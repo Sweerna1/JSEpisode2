@@ -19,6 +19,30 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  let newlist=[]
+  if(!names){
+    return (newlist)
+  }
+  if(names.length > 0){
+    let counter =0
+    while(counter<names.length){
+      if(names.length===1){
+        let random = names.getRandom()
+        newlist.push([random])
+      }
+      else if (names.length >=2){
+        let random = names.getRandom()
+        let random2 = names.getRandom()
+        let pair=[random, random2]
+        newlist.push(pair)
+      }
+     
+    }
+  }
+ 
+  return (newlist)
+
+  
 }
 
 module.exports = pairs;
